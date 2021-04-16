@@ -27,6 +27,10 @@ $( document ).ready(function() {
   $(".hero-btn__signup").on('click', ()=>{
     if(!modalSign){
       $(".modal-sign").css('display', 'flex');
+      $(".modal-login").removeClass('active');
+      $(".modal-sign-log").removeClass('active');
+      $(".modal-signUp").addClass('active')
+      $(".modal-sign-up").addClass('active')
       $("body").css('overflow', 'hidden');
       modalSign = true;
     }
@@ -38,7 +42,7 @@ $( document ).ready(function() {
       $(".modal-sign-up").removeClass('active')
       $(".modal-login").addClass('active');
       $(".modal-sign-log").addClass('active');
-      $("body").css('overflow', 'visible');
+      $("body").css('overflow', 'hidden');
       modalSign = true;
     }
   })
@@ -46,17 +50,12 @@ $( document ).ready(function() {
     if (modalSign){
       $(".modal-sign").css('display', 'none');
       modalSign = false;
+      $("body").css('overflow', 'visible');
     }
   })
 
   $(".modal-sign-up-form").validate({
     rules: {
-      password: { 
-        required: true,
-          minlength: 6,
-          maxlength: 10,
-
-      },
         cfmPassword: { 
           equalTo: "#signup-pass",
           minlength: 6,
