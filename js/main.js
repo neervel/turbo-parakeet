@@ -4,11 +4,13 @@ $( document ).ready(function() {
 
   $(".header-menu").on('click', ()=>{
     if(!modalMenu){
+      $(".modal-menu").css('display', 'block');
       $(".modal-menu").animate({right: '0'});
       $(".header-menu-img").attr('src', 'img/close.svg')
       modalMenu = true;
     }else{
       $(".modal-menu").animate({right: '-100%'});
+      $(".modal-menu").css('display', 'none');
       $(".header-menu-img").attr('src', 'img/menu.svg')
       modalMenu = false;
     }
@@ -25,6 +27,7 @@ $( document ).ready(function() {
   $(".hero-btn__signup").on('click', ()=>{
     if(!modalSign){
       $(".modal-sign").css('display', 'flex');
+      $("body").css('overflow', 'hidden');
       modalSign = true;
     }
   })
@@ -35,6 +38,7 @@ $( document ).ready(function() {
       $(".modal-sign-up").removeClass('active')
       $(".modal-login").addClass('active');
       $(".modal-sign-log").addClass('active');
+      $("body").css('overflow', 'visible');
       modalSign = true;
     }
   })
@@ -44,5 +48,22 @@ $( document ).ready(function() {
       modalSign = false;
     }
   })
+
+  $(".modal-sign-up-form").validate({
+    rules: {
+      password: { 
+        required: true,
+          minlength: 6,
+          maxlength: 10,
+
+      },
+        cfmPassword: { 
+          equalTo: "#signup-pass",
+          minlength: 6,
+          maxlength: 10
+      }
+    }
+
+});
 
 });

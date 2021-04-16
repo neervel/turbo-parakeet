@@ -22,6 +22,7 @@ body
   color: #fff
   position: relative
   overflow-x: hidden
+  font-size: 25px
 
 .header
   height: 125px
@@ -96,7 +97,7 @@ body
   background: $color-bg-scnd
   color: #fff
   text-align: center
-  font-size: 25px
+  
   line-height: 31px
   padding: 50px 0
   display: flex
@@ -125,20 +126,19 @@ body
       height: 350px
       width: 350px
       text-align: center
-      margin-right: 20px
-      &:last-child
-        margin-right: 0
+      margin-right: 10px
+      margin-left: 10px
     &__img
       height: 286px
       width: 342px
       background: $color-bg-third
-      border: none
+      display: block
       margin-bottom: 39px
     &__name
-      font-size: 25px
+      
 .footer
   padding: 100px 0
-  font-size: 25px
+  
   &-block
     display: flex
     flex-wrap: wrap
@@ -182,6 +182,10 @@ body
     transition: .2s
     &:hover
       color: #DA5B00
+  &-map
+    & iframe
+      width: 1072px
+      height: 434px
 .mission
   background: $color-bg-scnd
   padding: 80px 0
@@ -189,12 +193,18 @@ body
     display: flex
     align-items: center
   &-text
-    font-size: 25px
+    flex-basis: 50%
+  &-img
+    width: 50%
 
 .play
   background: $color-bg-scnd
   &-block
     padding: 90px 0
+    display: flex
+    align-items: center
+    flex-flow: column
+    
   &-item
     display: flex
     align-items: center
@@ -236,12 +246,13 @@ body
 .modal
   &-menu
     width: 600px
-    height: calc(100% - 125px)
+    height: auto
     background: $color-bg
     position: absolute
     top: 125px
-    right: -100%
+    right: -600px
     padding: 50px 65px
+    display: none
     &-item
       display: block
       border-radius: 45px
@@ -273,7 +284,7 @@ body
     align-items: center
     justify-content: center
     color: #000 
-    font-size: 25px
+    
     display: none
     z-index: 99
 
@@ -369,12 +380,346 @@ body
         color: #fff
         +bold
 
-
-
-
 .tabs__content
   display: none
   padding: 50px 90px
 .tabs__content.active 
   display: block
   
+
+@media screen and ( max-width: 1600px )
+  .container
+    width: 1000px
+  .modal
+    &-sign
+      &-nav
+        & li
+          height: 70px
+          width: 250px
+          font-size: 24px
+      &-up, &-log
+        &-input
+          height: 60px
+      &-close
+        height: 70px
+        width: 70px
+        right: -70px
+        & img
+          height: 30px
+          width: 30px
+  .contacts
+    &-block
+      width: 800px
+    &-map
+      & iframe
+        width: 800px
+  .mission
+    &-text
+      flex-basis: 70%
+    &-img
+      width: 30%
+  .soon
+    &-games
+      &-card
+        margin-bottom: 30px
+  .tabs__content
+    padding: 20px 40px
+@media screen and ( max-width: 1400px )
+  .play
+    &-item
+      &-block
+        height: auto
+        width: 800px
+    &-text
+      padding: 25px
+@media screen and ( max-width: 1080px )
+  .container
+    width: 800px
+  .header
+    height: 90px
+    &-block
+      height: 90px
+    &-menu
+      height: 60px
+      font-size: 30px
+      width: 250px
+  .hero
+    &-title
+      font-size: 48px
+      max-width: 600px
+      margin: 0 auto
+    &-subtitle
+      font-size: 32px
+      margin-bottom: 50px
+    &:no-button
+      &__signup
+        margin-right: 30px
+  .soon
+    &-title
+      font-size: 32px
+  .contacts
+    padding: 30px 0
+    &-item
+      display: flex
+      align-items: center
+      margin-bottom: 30px
+    &-block
+      width: 650px
+    &__text
+      font-size: 24px
+    &__img
+      height: 30px
+      width: 30px
+      margin-right: 20px
+    &-map
+      & iframe
+        width: 650px
+  .play
+    &-block
+      padding: 40px 0
+      flex-flow: row
+      flex-wrap: wrap
+      justify-content: center
+    &-item
+      background: $color-bg
+      flex-basis: 40%
+      position: relative
+      margin: 0 10px
+      margin-bottom: 30px
+      &-block
+        padding-right: 0
+        width: auto
+        flex-wrap: wrap
+    &-num
+      position: absolute
+      font-size: 30px
+      width: 40%
+      height: auto
+      margin-top: 15%
+      margin-right: 0
+      top: 0
+      background: none
+    &-img
+      margin-right: 0
+      margin-left: auto
+      width: 60%
+      height: auto
+    &-text
+      text-align: center
+      flex-basis: 100%
+      padding: 15px 20px
+    &-title
+      margin-bottom: 15px
+      font-size: 20px
+  .mission
+    padding: 40px 0
+    &-block
+      flex-wrap: wrap
+      justify-content: center
+    &-text
+      flex-basis: 100%
+    &-img
+      flex-basis: 70%
+      margin-top: 30px
+  .footer
+    padding: 60px 0
+  .modal
+    &-menu
+      top: 90px
+      z-index: 9
+@media screen and ( max-width: 860px )
+  .container
+    width: 700px
+@media screen and ( max-width: 768px )
+  .container
+    width: 90%
+  .header
+    &-menu
+      font-size: 22px
+      width: 200px
+      & img
+        height: 25px
+        width: 25px
+  .hero
+    padding: 63px 0
+    &-title
+      font-size: 34px
+    &-subtitle
+      font-size: 22px
+      margin-bottom: 30px
+    &-btn
+      height: 60px
+      font-size: 22px
+      &__signup
+        margin-right: 22px
+  .text-block
+    padding: 30px 0
+  .soon
+    padding-top: 30px
+    &-title
+      font-size: 22px
+      margin-bottom: 30px
+    &-games
+      padding: 30px 0
+      &-card
+        height: auto
+        width: auto
+        &:nth-child(3), &:nth-child(4)
+          margin-bottom: 0
+      &__img
+        width: 298px
+        height: 190px
+        margin-bottom: 10px
+  .footer
+    padding: 65px 0
+    &-separator
+      margin: 0 10px
+      font-size: 30px
+  .modal
+    &-menu
+      width: 380px
+      padding: 20px 40px 
+      &-item
+        width: 300px
+        height: 57px
+        font-size: 20px
+    &-sign
+      &-close
+        height: 52px
+        width: 52px
+        right: -52px
+      &-nav
+        & li
+          width: 215px
+          height: 52px
+      &-up, &-log
+        &-label
+          margin-bottom: 5px
+        &-input
+          margin-bottom: 10px 
+        &-accept
+          margin-top: 20px
+        &-btn
+          height: 66px
+          font-size: 20px
+  .tabs__content
+    padding: 20px 30px
+  body
+    font-size: 18px
+@media screen and ( max-width: 740px )
+  .contacts
+    &-block
+      width: 570px
+    &-map iframe
+      width: 570px
+  .play
+    &-block
+      padding: 40px
+    &-img
+      width: 60%
+      height: auto
+    &-item
+      flex-basis: 100%
+@media screen and ( max-width: 640px )
+  .container
+    width: 90%
+  .header
+    height: 80px
+    &-block
+      height: 80px
+    &-meni
+      height: 50px
+  .hero
+    padding-bottom: 30px
+    &-title
+      font-size: 30px
+    &-subtitle
+      max-width: 340px
+      margin: 0 auto
+      margin-bottom: 23px
+    &-btn
+      display: block
+      margin: 0 auto
+      &__signup
+        margin-bottom: 20px
+  .soon
+    &-games
+      &-card
+        margin-bottom: 25px
+        &:nth-child(3)
+          margin-bottom: 25px
+        &:last-child
+          margin-bottom: 0
+  .play
+    &-block
+      padding: 30px 20px
+  .contacts
+    &-block
+      width: 400px
+    &__text
+      font-size: 18px
+    &-map
+      & iframe
+        width: 400px
+        height: 300px
+  .mission
+    &-text
+      text-align: center
+  .footer
+    padding: 40px 0
+  .modal
+    &-menu
+      top: 80px
+    &-sign
+      &-close
+        top: -40px
+        right: 0
+        height: 40px
+        width: 40px
+        & img
+          height: 20px
+          width: 20px
+      &-nav
+        & li
+          width: 166px
+      &-up, &-log
+        &-btn
+          width: 224px
+          height: 54px
+      &-log
+        &-btn
+          margin-top: 20px
+  .tabs__content
+    padding: 15px
+
+@media screen and ( max-width: 480px )
+  body
+    font-size: 16px
+  .footer
+    &-links
+      margin-bottom: 20px
+    &-scnd
+      flex-wrap: wrap
+      & a
+        order: -1
+        flex-basis: 100%
+        margin-bottom: 20px
+  .contacts
+    &-block
+      width: 300px
+    &-map iframe
+      width: 300px
+  .play
+    &-img
+      width: 200px
+      height: auto
+  .modal
+    &-menu
+      width: 100%
+      &-item
+        width: 100%
+@media screen and ( max-width: 400px )
+  .play
+    &-img
+      width: 150px
+      height: auto

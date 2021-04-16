@@ -385,6 +385,7 @@ body {
   color: #fff;
   position: relative;
   overflow-x: hidden;
+  font-size: 25px;
 }
 
 .header {
@@ -484,7 +485,6 @@ body {
   background: #171B2A;
   color: #fff;
   text-align: center;
-  font-size: 25px;
   line-height: 31px;
   padding: 50px 0;
   display: flex;
@@ -526,28 +526,20 @@ body {
   height: 350px;
   width: 350px;
   text-align: center;
-  margin-right: 20px;
-}
-
-.soon-games-card:last-child {
-  margin-right: 0;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .soon-games__img {
   height: 286px;
   width: 342px;
   background: #2F354B;
-  border: none;
+  display: block;
   margin-bottom: 39px;
-}
-
-.soon-games__name {
-  font-size: 25px;
 }
 
 .footer {
   padding: 100px 0;
-  font-size: 25px;
 }
 
 .footer-block {
@@ -618,6 +610,11 @@ body {
   color: #DA5B00;
 }
 
+.contacts-map iframe {
+  width: 1072px;
+  height: 434px;
+}
+
 .mission {
   background: #171B2A;
   padding: 80px 0;
@@ -629,7 +626,11 @@ body {
 }
 
 .mission-text {
-  font-size: 25px;
+  flex-basis: 50%;
+}
+
+.mission-img {
+  width: 50%;
 }
 
 .play {
@@ -638,6 +639,9 @@ body {
 
 .play-block {
   padding: 90px 0;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
 }
 
 .play-item {
@@ -694,12 +698,13 @@ body {
 
 .modal-menu {
   width: 600px;
-  height: calc(100% - 125px);
+  height: auto;
   background: #0E0B14;
   position: absolute;
   top: 125px;
-  right: -100%;
+  right: -600px;
   padding: 50px 65px;
+  display: none;
 }
 
 .modal-menu-item {
@@ -741,7 +746,6 @@ body {
   align-items: center;
   justify-content: center;
   color: #000;
-  font-size: 25px;
   display: none;
   z-index: 99;
 }
@@ -880,4 +884,425 @@ body {
 
 .tabs__content.active {
   display: block;
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    width: 1000px;
+  }
+  .modal-sign-nav li {
+    height: 70px;
+    width: 250px;
+    font-size: 24px;
+  }
+  .modal-sign-up-input, .modal-sign-log-input {
+    height: 60px;
+  }
+  .modal-sign-close {
+    height: 70px;
+    width: 70px;
+    right: -70px;
+  }
+  .modal-sign-close img {
+    height: 30px;
+    width: 30px;
+  }
+  .contacts-block {
+    width: 800px;
+  }
+  .contacts-map iframe {
+    width: 800px;
+  }
+  .mission-text {
+    flex-basis: 70%;
+  }
+  .mission-img {
+    width: 30%;
+  }
+  .soon-games-card {
+    margin-bottom: 30px;
+  }
+  .tabs__content {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .play-item-block {
+    height: auto;
+    width: 800px;
+  }
+  .play-text {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 800px;
+  }
+  .header {
+    height: 90px;
+  }
+  .header-block {
+    height: 90px;
+  }
+  .header-menu {
+    height: 60px;
+    font-size: 30px;
+    width: 250px;
+  }
+  .hero-title {
+    font-size: 48px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .hero-subtitle {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  .hero:no-button__signup {
+    margin-right: 30px;
+  }
+  .soon-title {
+    font-size: 32px;
+  }
+  .contacts {
+    padding: 30px 0;
+  }
+  .contacts-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .contacts-block {
+    width: 650px;
+  }
+  .contacts__text {
+    font-size: 24px;
+  }
+  .contacts__img {
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+  }
+  .contacts-map iframe {
+    width: 650px;
+  }
+  .play-block {
+    padding: 40px 0;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .play-item {
+    background: #0E0B14;
+    flex-basis: 40%;
+    position: relative;
+    margin: 0 10px;
+    margin-bottom: 30px;
+  }
+  .play-item-block {
+    padding-right: 0;
+    width: auto;
+    flex-wrap: wrap;
+  }
+  .play-num {
+    position: absolute;
+    font-size: 30px;
+    width: 40%;
+    height: auto;
+    margin-top: 15%;
+    margin-right: 0;
+    top: 0;
+    background: none;
+  }
+  .play-img {
+    margin-right: 0;
+    margin-left: auto;
+    width: 60%;
+    height: auto;
+  }
+  .play-text {
+    text-align: center;
+    flex-basis: 100%;
+    padding: 15px 20px;
+  }
+  .play-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .mission {
+    padding: 40px 0;
+  }
+  .mission-block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mission-text {
+    flex-basis: 100%;
+  }
+  .mission-img {
+    flex-basis: 70%;
+    margin-top: 30px;
+  }
+  .footer {
+    padding: 60px 0;
+  }
+  .modal-menu {
+    top: 90px;
+    z-index: 9;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .header-menu {
+    font-size: 22px;
+    width: 200px;
+  }
+  .header-menu img {
+    height: 25px;
+    width: 25px;
+  }
+  .hero {
+    padding: 63px 0;
+  }
+  .hero-title {
+    font-size: 34px;
+  }
+  .hero-subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .hero-btn {
+    height: 60px;
+    font-size: 22px;
+  }
+  .hero-btn__signup {
+    margin-right: 22px;
+  }
+  .text-block {
+    padding: 30px 0;
+  }
+  .soon {
+    padding-top: 30px;
+  }
+  .soon-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .soon-games {
+    padding: 30px 0;
+  }
+  .soon-games-card {
+    height: auto;
+    width: auto;
+  }
+  .soon-games-card:nth-child(3), .soon-games-card:nth-child(4) {
+    margin-bottom: 0;
+  }
+  .soon-games__img {
+    width: 298px;
+    height: 190px;
+    margin-bottom: 10px;
+  }
+  .footer {
+    padding: 65px 0;
+  }
+  .footer-separator {
+    margin: 0 10px;
+    font-size: 30px;
+  }
+  .modal-menu {
+    width: 380px;
+    padding: 20px 40px;
+  }
+  .modal-menu-item {
+    width: 300px;
+    height: 57px;
+    font-size: 20px;
+  }
+  .modal-sign-close {
+    height: 52px;
+    width: 52px;
+    right: -52px;
+  }
+  .modal-sign-nav li {
+    width: 215px;
+    height: 52px;
+  }
+  .modal-sign-up-label, .modal-sign-log-label {
+    margin-bottom: 5px;
+  }
+  .modal-sign-up-input, .modal-sign-log-input {
+    margin-bottom: 10px;
+  }
+  .modal-sign-up-accept, .modal-sign-log-accept {
+    margin-top: 20px;
+  }
+  .modal-sign-up-btn, .modal-sign-log-btn {
+    height: 66px;
+    font-size: 20px;
+  }
+  .tabs__content {
+    padding: 20px 30px;
+  }
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .contacts-block {
+    width: 570px;
+  }
+  .contacts-map iframe {
+    width: 570px;
+  }
+  .play-block {
+    padding: 40px;
+  }
+  .play-img {
+    width: 60%;
+    height: auto;
+  }
+  .play-item {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90%;
+  }
+  .header {
+    height: 80px;
+  }
+  .header-block {
+    height: 80px;
+  }
+  .header-meni {
+    height: 50px;
+  }
+  .hero {
+    padding-bottom: 30px;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero-subtitle {
+    max-width: 340px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+  }
+  .hero-btn {
+    display: block;
+    margin: 0 auto;
+  }
+  .hero-btn__signup {
+    margin-bottom: 20px;
+  }
+  .soon-games-card {
+    margin-bottom: 25px;
+  }
+  .soon-games-card:nth-child(3) {
+    margin-bottom: 25px;
+  }
+  .soon-games-card:last-child {
+    margin-bottom: 0;
+  }
+  .play-block {
+    padding: 30px 20px;
+  }
+  .contacts-block {
+    width: 400px;
+  }
+  .contacts__text {
+    font-size: 18px;
+  }
+  .contacts-map iframe {
+    width: 400px;
+    height: 300px;
+  }
+  .mission-text {
+    text-align: center;
+  }
+  .footer {
+    padding: 40px 0;
+  }
+  .modal-menu {
+    top: 80px;
+  }
+  .modal-sign-close {
+    top: -40px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+  }
+  .modal-sign-close img {
+    height: 20px;
+    width: 20px;
+  }
+  .modal-sign-nav li {
+    width: 166px;
+  }
+  .modal-sign-up-btn, .modal-sign-log-btn {
+    width: 224px;
+    height: 54px;
+  }
+  .modal-sign-log-btn {
+    margin-top: 20px;
+  }
+  .tabs__content {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  .footer-links {
+    margin-bottom: 20px;
+  }
+  .footer-scnd {
+    flex-wrap: wrap;
+  }
+  .footer-scnd a {
+    order: -1;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .contacts-block {
+    width: 300px;
+  }
+  .contacts-map iframe {
+    width: 300px;
+  }
+  .play-img {
+    width: 200px;
+    height: auto;
+  }
+  .modal-menu {
+    width: 100%;
+  }
+  .modal-menu-item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .play-img {
+    width: 150px;
+    height: auto;
+  }
 }
