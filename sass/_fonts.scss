@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Geometria-Medium';
+  src: url('../fonts/Geometria-Medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Geometria-Bold';
+  src: url('../fonts/Geometria-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Geometria-ExtraBold';
+  src: url('../fonts/Geometria-ExtraBold.ttf');
+  font-weight: 800;
+}
+
+@mixin normal {
+  font-family: "Geometria", sans-serif;
+  font-weight: 400;
+}
+@mixin medium {
+  font-family: "Geometria-Medium", sans-serif;
+  font-weight: 500;
+}
+@mixin bold {
+  font-family: "Geometria-Bold", sans-serif;
+  font-weight: 700;
+}
+@mixin extrabold {
+  font-family: "Geometria-ExtraBold", sans-serif;
+  font-weight: 800;
+}
+// 400, 500, 700, 800

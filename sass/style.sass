@@ -1,0 +1,380 @@
+@import normalize
+@import fonts
+
+$color-bg: #0E0B14
+$color-bg-scnd: #171B2A
+$color-bg-third: #2F354B
+
+.container
+  max-width: 1400px
+  margin: 0 auto
+
+*
+  box-sizing: border-box
+button
+  border: none
+  &:focus
+    outline: none
+  
+body
+  +normal
+  background: $color-bg
+  color: #fff
+  position: relative
+  overflow-x: hidden
+
+.header
+  height: 125px
+  background: $color-bg-scnd
+  &-block
+    height: 125px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+  &-menu
+    display: block
+    margin-right: 0
+    margin-left: auto
+    background: transparent
+    height: 90px
+    width: 282px
+    font-size: 40px
+    border-radius: 5px
+    color: #fff
+    font-weight: bold
+    transition: .2s
+    padding: 0 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-img
+      height: 40px
+      width: 40px
+    &:hover
+      background: $color-bg-third
+      cursor: pointer
+
+.hero
+  padding: 138px 0
+  width: auto
+  color: #fff
+  text-align: center
+  background: url("/img/hero-bg.png")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+  &-title
+    margin: 0
+    margin-bottom: 10px
+    font-size: 65px
+    +extrabold
+    text-transform: uppercase
+  &-subtitle
+    margin: 0
+    margin-bottom: 74px
+    font-size: 45px
+  &-btn
+    width: 292px
+    height: 84px
+    border-radius: 45px
+    font-size: 30px
+    +bold 
+    transition: .2s
+    &:hover
+      transform: translateY(-5px)
+      cursor: pointer
+    &__signup
+      margin-right: 60px
+      color: #fff
+      background: linear-gradient(180deg, #FFBE41 0%, #DA5B00 100%)
+      box-shadow: 0px 0px 50px rgba(255, 184, 0, 0.25)
+    &__login
+      background: #fff
+      border: 1px solid #000000
+.text-block
+  background: $color-bg-scnd
+  color: #fff
+  text-align: center
+  font-size: 25px
+  line-height: 31px
+  padding: 50px 0
+  display: flex
+  align-items: center
+  justify-content: center
+  &__text
+    margin: 0 auto
+.soon
+  padding-top: 50px
+  &-title
+    text-align: center
+    +extrabold
+    margin: 0
+    text-transform: uppercase
+    font-size: 40px
+    margin-bottom: 50px
+  &-games
+    background: $color-bg-scnd
+    padding: 70px 0 35px 0
+    &-block
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+    &-card
+      height: 350px
+      width: 350px
+      text-align: center
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+    &__img
+      height: 286px
+      width: 342px
+      background: $color-bg-third
+      border: none
+      margin-bottom: 39px
+    &__name
+      font-size: 25px
+.footer
+  padding: 100px 0
+  font-size: 25px
+  &-block
+    display: flex
+    flex-wrap: wrap
+  &-link
+    color: #fff
+    transition: .2s
+    &:hover
+      color: #DA5B00
+    &s
+      flex-basis: 100%
+      margin-bottom: 30px
+      display: flex
+      align-items: center
+  &-separator
+    font-size: 40px
+    margin: 0 30px
+  &-scnd
+    flex-basis: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.contacts
+  background: $color-bg-scnd
+  padding: 90px 0
+  &-block
+    margin: 0 auto
+    width: 1072px
+  &-item
+    margin-bottom: 45px
+    &:last-child
+      margin-bottom: 80px
+  &__img
+    height: 40px
+    width: 40px
+    margin-right: 24px
+  &__text
+    font-size: 40px
+    color: #fff
+    text-decoration: none
+    transition: .2s
+    &:hover
+      color: #DA5B00
+.mission
+  background: $color-bg-scnd
+  padding: 80px 0
+  &-block
+    display: flex
+    align-items: center
+  &-text
+    font-size: 25px
+
+.play
+  background: $color-bg-scnd
+  &-block
+    padding: 90px 0
+  &-item
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+    &-block
+      display: flex
+      align-items: center
+      height: 224px
+      width: 1120px
+      background: $color-bg
+      padding-right: 28px
+  &-num
+    border-radius: 50%
+    height: 124px
+    width: 124px
+    display: flex
+    align-items: center
+    justify-content: center
+    +extrabold
+    font-size: 50px
+    background: $color-bg
+    margin-right: 52px
+  &-img
+    margin-right: 24px
+    height: 100%
+    width: 328px
+  &-title
+    margin: 0
+    margin-bottom: 30px
+    font-size: 22px
+    +bold
+  &-desc
+    font-size: 22px
+    margin: 0
+  
+
+.modal
+  &-menu
+    width: 600px
+    height: calc(100% - 125px)
+    background: $color-bg
+    position: absolute
+    top: 125px
+    right: -100%
+    padding: 50px 65px
+    &-item
+      display: block
+      border-radius: 45px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #fff
+      font-size: 30px
+      text-decoration: none
+      background: $color-bg-scnd
+      height: 90px
+      width: 470px
+      margin-bottom: 30px
+      transition: .2s
+      &:last-child
+        margin-bottom: 0
+      &:hover
+        color: #DA5B00
+    &-active
+      background: #DC7700
+  &-sign
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: rgba(0, 0, 0, .6)
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #000 
+    font-size: 25px
+    display: none
+    z-index: 99
+
+    &-block
+      background: #fff
+      position: relative
+    &-close
+      position: absolute
+      height: 100px
+      width: 100px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #E7EAF8
+      right: -100px
+      top: 0
+      &:hover
+        cursor: pointer
+      & img
+        height: 50px
+        width: 50px
+    &-nav
+      list-style: none
+      padding: 0
+      display: flex
+      align-items: center
+      margin: 0
+      & li
+        height: 100px
+        width: 350px
+        font-size: 30px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #E7EAF8
+        &.active
+          background: #fff
+    &-up
+      &-form
+        display: flex
+        flex-flow: column
+      &-label
+        margin-bottom: 15px
+      &-input
+        width: 100%
+        height: 90px
+        border: 1px solid #000000
+        border-radius: 5px
+        padding: 0 27px
+        margin-bottom: 15px
+      &-check
+        height: 25px
+        width: 25px
+        margin-right: 10px
+      &-accept
+        margin-top: 35px
+        display: flex
+        align-items: center
+        justify-content: center
+      &-link
+        color: #000
+      &-btn
+        width: 293px
+        height: 84px
+        background: linear-gradient(180deg, #FFBE41 0%, #DA5B00 100%)
+        box-shadow: 0px 0px 50px rgba(255, 184, 0, 0.25)
+        border-radius: 100px
+        margin: 0 auto
+        margin-top: 35px
+        color: #fff
+        +bold
+    &-log
+      &-form
+        display: flex
+        flex-flow: column
+      &-label
+        margin-bottom: 15px
+      &-input
+        width: 100%
+        height: 90px
+        border: 1px solid #000000
+        border-radius: 5px
+        padding: 0 27px
+        margin-bottom: 15px
+      &-btn
+        width: 293px
+        height: 84px
+        background: linear-gradient(180deg, #FFBE41 0%, #DA5B00 100%)
+        box-shadow: 0px 0px 50px rgba(255, 184, 0, 0.25)
+        border-radius: 100px
+        margin: 0 auto
+        margin-top: 35px
+        color: #fff
+        +bold
+
+
+
+
+.tabs__content
+  display: none
+  padding: 50px 90px
+.tabs__content.active 
+  display: block
+  
